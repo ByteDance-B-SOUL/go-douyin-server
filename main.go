@@ -11,6 +11,10 @@ import (
 func main() {
 	h := server.Default(server.WithHostPorts("127.0.0.1:8080"))
 
+	RegisterGroupRouteWithMiddleware(h)
+	RegisterParaRoute(h)
+	another(h)
+
 	h.GET("/hello", func(ctx context.Context, c *app.RequestContext) {
 		c.String(consts.StatusOK, "OK")
 	})
