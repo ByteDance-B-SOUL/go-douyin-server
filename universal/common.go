@@ -1,11 +1,17 @@
 package universal
 
 type User struct {
-	id            int64
-	name          string
-	followCount   int64
-	followerCount int64
-	isFollow      bool
+	id              int64
+	name            string
+	followCount     int64
+	followerCount   int64
+	isFollow        bool
+	avatar          string
+	backgroundImage string
+	signature       string
+	totalFavorited  int64
+	workCount       int64
+	favoritesCount  int64
 }
 
 type Video struct {
