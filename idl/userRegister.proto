@@ -1,0 +1,14 @@
+syntax = "proto2";
+package core;
+
+message douyinUserRegisterRequest {
+  required string username = 1;
+  required string password = 2;
+}
+
+message douyinUserRegisterResponse {
+  required int32 statusCode = 1;
+  optional string statusMsg = 2;
+  required int64 userId = 3;
+  required string token = 4;
+}

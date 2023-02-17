@@ -1,0 +1,13 @@
+syntax = "proto2";
+package core;
+
+message douyinPublishActionRequest {
+  required string token = 1;
+  required bytes data = 2;
+  required string title = 3;
+}
+
+message douyinPublishActionResponse {
+  required int32 status_code = 1;
+  optional string status_msg = 2;
+}

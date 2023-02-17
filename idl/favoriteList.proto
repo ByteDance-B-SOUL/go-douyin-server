@@ -1,0 +1,38 @@
+syntax = "proto2";
+package interactive;
+
+message douyinFavoriteListRequest {
+  required int64 userId = 1;
+  required string token = 2;
+}
+
+message douyinFavoriteListResponse {
+  required int32 statusCode = 1;
+  optional string statusMsg = 2;
+  repeated Video videoList = 3;
+}
+
+message Video {
+  required int64 id =1;
+  required User author = 2;
+  required string playUrl = 3;
+  required string coverUrl = 4;
+  required int64 favoriteCount = 5;
+  required int64 commentCount = 6;
+  required bool isFavorite = 7;
+  required string title = 8;
+}
+
+message User {
+  required int64 id = 1;
+  required string name = 2;
+  optional int64 followCount = 3;
+  optional int64 followerCount = 4;
+  required bool isFollow = 5;
+  optional string avatar =6;
+  optional string backgroundImage = 7;
+  optional string signature = 8;
+  optional int64 totalFavorited = 9;
+  optional int64 workCount = 10;
+  optional int64 favoriteCount = 11;
+}

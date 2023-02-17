@@ -1,0 +1,13 @@
+syntax = "proto2";
+package interactive;
+
+message douyinFavoriteActionRequest {
+  required string token = 1;
+  required int64 videoId = 2;
+  required int32 actionType = 3;
+}
+
+message douyinFavoriteActionResponse {
+  required int32 statusCode = 1;
+  optional string statusMsg = 2;
+}
